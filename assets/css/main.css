@@ -1,5 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
+
+:root {
+  --primary-color: ;
+  --secondary-color: ;
+  --text-color: #1c1c1c;
+  --link-color: #1c1c1c;
+
+  --main-font: "Poppins", sans-serif;
+
+  --title-font: ;
+  --h1-font: ;
+  --h2-font: ;
+  --h3-font: ;
+
+  --container-margin-w: ;
+  --container-margin-h: ;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}/*# sourceMappingURL=main.css.map */
+}
+
+body {
+  overflow-x: hidden;
+  cursor: none;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 15vh;
+  align-items: center;
+  padding: 0 5vw;
+  font-family: var(--main-font);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav-link {
+  padding: 0 0.7rem;
+  margin: 0 0.7rem;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 0.9rem;
+}
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  z-index: -1;
+}
+
+.link-grow {
+  transform: scale(2);
+  background-color: black;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.theme-changer {
+  padding: 0 0.7rem;
+  margin: 0 0.7rem;
+  font-size: 1rem;
+  color: var(--link-color);
+}
