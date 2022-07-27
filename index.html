@@ -8,24 +8,58 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://unpkg.com/pattern.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="cursor"></div>
     <nav class="navbar" id="navbar">
-        <h1 class="logo">Aryan T</h1>
+        <h1 class="logo" id="logo">Aryan T</h1>
         <div class="links">
             <ul class="nav-links">
-                <li class="nav-link"><a href="#" class="link">Home</a></li>
-                <li class="nav-link"><a href="#" class="link">Portfolio</a></li>
-                <li class="nav-link"><a href="#" class="link">Aboutme</a></li>
-                <li class="nav-link"><a href="#" class="link">Reviews</a></li>
-                <li class="nav-link"><a href="#" class="link">Contactme</a></li>
+                <li class="nav-link"><a href="index.html" class="link">Home</a></li>
+                <li class="nav-link"><a href="#portfolio" class="link">Portfolio</a></li>
+                <li class="nav-link"><a href="#about" class="link">Aboutme</a></li>
+                <li class="nav-link"><a href="#reviews" class="link">Reviews</a></li>
+                <li class="nav-link"><a href="#contact" class="link">Contactme</a></li>
             </ul>
-            <div class="theme-changer"><i class="uil uil-moon"></i></div>
+            <div class="theme-changer"><i class="uil uil-sun" id="icon"></i></div>
         </div>
     </nav>
-    <canvas id="canvas"></canvas>
+    <div class="header">
+        <div class="pattern-cross-dots-lg" id="dots-background">
+        </div>
+        <canvas id="canvas"></canvas>
+        <div class="header-content">
+            <h3 id="welcome">Welcome!</h3>
+            <h1 id="aryan_title">I am&nbsp;<p class="aryan">Aryan</p>
+            </h1>
+            <div class="wrapper">
+                <div class="static-txt">a&nbsp;</div>
+                <ul class="dynamic-txts">
+                    <li><span>YouTuber</span></li>
+                    <li><span>Designer</span></li>
+                    <li><span>Developer</span></li>
+                    <li><span>Freelancer</span></li>
+                </ul>
+            </div>
+            <a aria-label='Thanks' class='h-button centered' data-text='Contact Me' href='#contact-me' id="contact-me">
+                <span>T</span>
+                <span>h</span>
+                <span>a</span>
+                <span>n</span>
+                <span>k</span>
+                <span>s</span>
+            </a>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
