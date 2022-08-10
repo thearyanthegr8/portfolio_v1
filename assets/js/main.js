@@ -166,51 +166,160 @@ animate();
 // setInterval(cycleText, 3000);
 
 const logoAnimation = document.querySelector(".logo");
-const navLinksAnimation = document.querySelector(".links");
+const navLinksAnimation = document.querySelector(".nav-links");
 const welcomeAnimation = document.querySelector("#welcome");
 const aryanAnimation = document.querySelector("#aryan_title");
 const wordsAnimation = document.querySelector(".wrapper");
 const contactmeAnimation = document.querySelector("#contact-me");
+const burgerAnimation = document.querySelector(".burger");
 
 const tl = new TimelineMax();
 
-tl.fromTo(
-  logoAnimation,
-  1.2,
-  { opacity: "0", x: "-40" },
-  { opacity: "1", x: "0", ease: Power2.easeInOut }
-)
-  .fromTo(
-    navLinksAnimation,
+var w = window.innerWidth;
+
+if (w >= 960) {
+  tl.fromTo(
+    logoAnimation,
     1.2,
-    { opacity: "0", x: "+40" },
-    { opacity: "1", x: "0", ease: Power2.easeInOut },
-    "-=1.2"
+    { opacity: "0", x: "-40" },
+    { opacity: "1", x: "0", ease: Power2.easeInOut }
   )
-  .fromTo(
-    welcomeAnimation,
-    1,
-    { opacity: "0", y: "+40" },
-    { opacity: "1", y: "0", ease: Power2.easeInOut }
+    .fromTo(
+      navLinksAnimation,
+      1.2,
+      { opacity: "0", x: "+40" },
+      { opacity: "1", x: "0", ease: Power2.easeInOut },
+      "-=1.2"
+    )
+    .fromTo(
+      welcomeAnimation,
+      1,
+      { opacity: "0", y: "+40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut }
+    )
+    .fromTo(
+      aryanAnimation,
+      1,
+      { opacity: "0", y: "+40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut },
+      "-=1"
+    )
+    .fromTo(
+      wordsAnimation,
+      1,
+      { opacity: "0", y: "+40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut },
+      "-=1"
+    )
+    .fromTo(
+      contactmeAnimation,
+      1,
+      { opacity: "0", y: "-40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut },
+      "-=1"
+    );
+  tl.fromTo(
+    logoAnimation,
+    1.2,
+    { opacity: "0", x: "-40" },
+    { opacity: "1", x: "0", ease: Power2.easeInOut }
   )
-  .fromTo(
-    aryanAnimation,
-    1,
-    { opacity: "0", y: "+40" },
-    { opacity: "1", y: "0", ease: Power2.easeInOut },
-    "-=1"
+    .fromTo(
+      navLinksAnimation,
+      1.2,
+      { opacity: "0", x: "+40" },
+      { opacity: "1", x: "0", ease: Power2.easeInOut },
+      "-=1.2"
+    )
+    .fromTo(
+      welcomeAnimation,
+      1,
+      { opacity: "0", y: "+40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut }
+    )
+    .fromTo(
+      aryanAnimation,
+      1,
+      { opacity: "0", y: "+40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut },
+      "-=1"
+    )
+    .fromTo(
+      wordsAnimation,
+      1,
+      { opacity: "0", y: "+40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut },
+      "-=1"
+    )
+    .fromTo(
+      contactmeAnimation,
+      1,
+      { opacity: "0", y: "-40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut },
+      "-=1"
+    );
+} else {
+  tl.fromTo(
+    logoAnimation,
+    1.2,
+    { opacity: "0", x: "-40" },
+    { opacity: "1", x: "0", ease: Power2.easeInOut }
   )
-  .fromTo(
-    wordsAnimation,
-    1,
-    { opacity: "0", y: "+40" },
-    { opacity: "1", y: "0", ease: Power2.easeInOut },
-    "-=1"
-  )
-  .fromTo(
-    contactmeAnimation,
-    1,
-    { opacity: "0", y: "-40" },
-    { opacity: "1", y: "0", ease: Power2.easeInOut },
-    "-=1"
-  );
+    .fromTo(
+      burgerAnimation,
+      1.2,
+      { opacity: "0", x: "+40" },
+      { opacity: "1", x: "0", ease: Power2.easeInOut },
+      "-=1.2"
+    )
+    .fromTo(
+      welcomeAnimation,
+      1,
+      { opacity: "0", y: "+40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut }
+    )
+    .fromTo(
+      aryanAnimation,
+      1,
+      { opacity: "0", y: "+40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut },
+      "-=1"
+    )
+    .fromTo(
+      wordsAnimation,
+      1,
+      { opacity: "0", y: "+40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut },
+      "-=1"
+    )
+    .fromTo(
+      contactmeAnimation,
+      1,
+      { opacity: "0", y: "-40" },
+      { opacity: "1", y: "0", ease: Power2.easeInOut },
+      "-=1"
+    );
+}
+
+const navSlide = () => {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
+  const navLinks = document.querySelectorAll(".navbar-links");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
+
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.5
+        }s`;
+      }
+    });
+    burger.classList.toggle("toggle");
+  });
+};
+
+navSlide();
