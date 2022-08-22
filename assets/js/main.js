@@ -218,46 +218,6 @@ if (w >= 960) {
       { opacity: "1", y: "0", ease: Power2.easeInOut },
       "-=1"
     );
-  tl.fromTo(
-    logoAnimation,
-    1.2,
-    { opacity: "0", x: "-40" },
-    { opacity: "1", x: "0", ease: Power2.easeInOut }
-  )
-    .fromTo(
-      navLinksAnimation,
-      1.2,
-      { opacity: "0", x: "+40" },
-      { opacity: "1", x: "0", ease: Power2.easeInOut },
-      "-=1.2"
-    )
-    .fromTo(
-      welcomeAnimation,
-      1,
-      { opacity: "0", y: "+40" },
-      { opacity: "1", y: "0", ease: Power2.easeInOut }
-    )
-    .fromTo(
-      aryanAnimation,
-      1,
-      { opacity: "0", y: "+40" },
-      { opacity: "1", y: "0", ease: Power2.easeInOut },
-      "-=1"
-    )
-    .fromTo(
-      wordsAnimation,
-      1,
-      { opacity: "0", y: "+40" },
-      { opacity: "1", y: "0", ease: Power2.easeInOut },
-      "-=1"
-    )
-    .fromTo(
-      contactmeAnimation,
-      1,
-      { opacity: "0", y: "-40" },
-      { opacity: "1", y: "0", ease: Power2.easeInOut },
-      "-=1"
-    );
 } else {
   tl.fromTo(
     logoAnimation,
