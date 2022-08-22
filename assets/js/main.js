@@ -12,7 +12,8 @@ function cursor(e) {
 }
 
 var icon = document.getElementById("icon");
-icon.onclick = function () {
+var iconDiv = document.getElementById("icon-div");
+iconDiv.onclick = function () {
   document.body.classList.toggle("dark-theme");
   if (darkTheme == false) {
     darkTheme = true;

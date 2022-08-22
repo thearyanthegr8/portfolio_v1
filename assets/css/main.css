@@ -100,7 +100,7 @@ body {
 
 #canvas {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .burger div {
@@ -139,10 +139,22 @@ body {
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
+  
+  .link {
+    cursor: pointer;
+  }
 
-  .nav-links li,
-  .theme-changer {
+  .navbar-links {
     opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-links:hover {
+    background-color: var(--secondary-color);
   }
 
   .burger {
@@ -352,5 +364,26 @@ body {
   }
   100% {
     left: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+
+  #welcome {
+    text-align: center;
+  }
+
+  #aryan_title {
+    text-align: center;
   }
 }
