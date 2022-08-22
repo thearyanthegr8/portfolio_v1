@@ -323,3 +323,11 @@ const navSlide = () => {
 };
 
 navSlide();
+
+//Typed JS Animation
+var typed = new Typed(".auto-type", {
+  strings: ["Programmer", "UI / UX Designer", "FreeLancer", "BTech Student"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  loop: true
+})
