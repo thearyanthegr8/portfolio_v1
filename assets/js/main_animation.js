@@ -8,3 +8,4 @@ tl.fromTo(
   { opacity: "0", x: "-40" },
   { opacity: "1", x: "0", ease: Power2.easeInOut }
 );
+
